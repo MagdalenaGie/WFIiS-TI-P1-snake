@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+    <script src="..\scripts\snake.js"></script>
+    <script src="..\scripts\main.js"></script>
+    <link rel="stylesheet" href="..\css\style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Snake</h1>
+        <p>Wąż, który zmienił mobilną rozrywkę. Od 1-pikselowej linii do grafiki 3D</p>
+    </div>
+
+    <div class="topnav">
+        <a href="#item1">Historia gry</a>
+        <a href="#item2">Zagraj sam</a>
+        <a href="#item3">Rozwój gry</a>
+        <a href="#item4">Jak stara jest gra?</a>
+    </div>
+
+    <!-- Zawartość wszystkich zakładek, wyświetla się tylko jedna na raz -->
+    <div class="items">
+        <!-- zakładka nr.1, któtki wstęp, o grze itp -->
+        <div class="navitem" id="item1">
+            <div class="card row">
+                <div class="column">
+                    <h2>
+                        Są tytuły, bez których trudno wyobrazić sobie współczesny świat gier. Obok takich klasyków, jak
+                        Pong czy Mario, nie można zapomnieć o Snake'u. To gra, która zmieniła oblicze mobilnej rozrywki!
+                    </h2>
+                    <h2>Legenda Nokii</h2>
+                    <p>
+                        Skąd wzięła się legenda starych telefonów Nokii? W epoce smartfonów tamte, proste urządzenia są
+                        często wspominane jako wzór niezawodności, odporności i prostoty, na dodatek działający bez
+                        doładowywania przez wiele dni. Wśród kilku ważnych cech, dzięki
+                        którym przed laty Nokia podbiła serca użytkowników, nie można zapomnieć o jednej – być może
+                        ważniejszej od wszystkich pozostałych, razem wziętych. Chodzi oczywiście o znak rozpoznawczy
+                        fińskich telefonów, jakim – obok Nokia tune
+                        – stał się legendarny, kultowy, jedyny i niepowtarzalny Wąż, znany również jako Snake. Nie
+                        zaryzykuję wiele twierdząc, że w wielu przypadkach to właśnie ta gra decydowała o wyborze marki
+                        telefonu. To był killer feature swoich czasów
+                        – kluczowa cecha, która w momencie zawahania przeważała szalę.
+                    </p>
+                    <h2>Jak to się zaczęło?</h2>
+                    <p>Ta uzależniająco prosta gra zostałą wydana w 1997 z nokią 6110 - być może jeszcze ją pamiętasz,
+                        to ten niebieski telefon w kształcie batonika z wystającą w górnym rogu anteną.</p>
+                </div>
+                <img src="../media/snake01.jpg" alt="Snake game image" class="column" style="padding: 25px 50px;">
+            </div>
+        </div>
+
+        <!-- zakładka nr.2, gra -->
+        <div class="navitem" id="item2">
+            <div class="card row">
+                <div class="column">
+                    <h2>Sterowanie</h2>
+                    <p>
+                        Do sterowania wężem użyj strzałek - ich kierunki będą odpowiadać kierunkowi jego ruchu. Uwaga!
+                        Nie ma możliwości odwrócenia kierunku, tzn, jeżeli przemieszczasz się obecnie w prawo, to aby
+                        skręcić w lewo, musisz najpierw użyś strzałki w górę lub w dół,
+                        a dopiero póżniej w lewo. Jeśli klikniesz od razu kierunek przeciwstawny (czyli np.idąc w prawo
+                        lewy), nic się nie stanie, wąż nie zmieni kierunku.
+                    </p>
+                    <h2>Cel gry</h2>
+                    <p>
+                        Twoim zadaniem jest zbierać czerwone kwadraty - tzw. pożywienie. Im więcej będziesz karmić
+                        swojego węża, tym dłuższy się stanie. Dodatkowo, każda zebrana kostka to +5 punktów, a ty chcesz
+                        zebrać ich jak najwięcej!
+                    </p>
+                    <h2>Koniec gry</h2>
+                    <p>Gra toczy się dotąd, aż wąż sam siebie nie ugryzie - wtedy przegrywasz. Nic się nie martw, nawet
+                        jeśli to się zdarzy, możesz zagrać jeszcze raz!</p>
+                </div>
+                <div class="column">
+                    <canvas id="game" width="500" height="300"
+                        style="border: 2px solid #fff000;background: #500050;"></canvas>
+                    <div class="row">
+                        <button class="button column" id="startBtn" onclick=startGame()><span>Play</span></button>
+                        <p class="column printScore" id="printScore">
+                            Wynik:
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- zakładka nr.3, opis zasad, rozwój gry, wideo -->
+        <div class="navitem" id="item3">
+            <div class="card row">
+                <div class="column">
+                    <h2>Jedna gra, wiele wersji</h2>
+                    <p>Ta wydawać by się mogło banalnie prosta gra, może mieć niejedno oblicze. Wraz z upływem czasu
+                        rozwijały się coraz nowsze technologie, a także oczekiwania graczy. Nic więc dziwnego, że tak
+                        kultowa gra doczekała się wielu wersji, od
+                        prostych po bardzo zaawansowane technicznie. Jeśli jesteś ciekaw jak przebiegała droga rozwoju
+                        tej złudnie niepozornej gry mobilnej, zobacz wideo po prawej!</p>
+                </div>
+                <div class="column">
+                    <video width="550" height="300" controls>
+                        <source src="../media/snakevid.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="navitem" id="item4">
+            <div class="card row">
+                <div class="column">
+                    <h2>Kiedy wydano grę?</h2>
+                    <p>Legendarna nokia 6110 została ogłoszona 18 grudnia 1997 i wypuszczona nan rynek już w kolejnym
+                        roku, 1998. Zobaczmy, ile dni minęło od tego czasu!
+                    </p>
+
+                    <label>Wybierz jednostkę czasu:</label>
+                    <select class="jednostka" name="jednostka" id="jednostka">
+                        <option value="rok">Oblicz w latach</option>
+                        <option value="dzien" select>Oblicz w dniach</option>
+                        <option value="godzina">Oblicz w godzinach</option>
+                        <!--input id="selectBtn" type="button" value="Sprawdźmy to!" /-->
+                    </select>
+
+                    <button id="sprawdzBtn" onClick=startWorker()>Sprawdźmy to!</button>
+                    <p id="result"></p>
+                </div>
+                <div class="column">
+                    <img src="../media/snake02.gif" alt="Snake game gif" style="padding: 25px 50px;">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

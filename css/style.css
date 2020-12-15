@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+    margin: 0% 10%;
+}
+
+
+/* header */
+
+.header {
+    padding: 30px;
+    text-align: center;
+    color: #fff000;
+    background: #500050;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+
+/* top navigation bar */
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+/* the topnav links */
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #fff000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+/* Change color on hover */
+
+.topnav a:hover {
+    background-color: #fff000;
+    color: black;
+}
+
+
+/* Add a card effect for articles */
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+/* Footer */
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+div.items div.navitem:not(:target) {
+    display: none
+}
+
+div.items div.navitem:target {
+    display: block
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 15px;
+}
+
+.button {
+    border-radius: 4px;
+    background-color: #500050;
+    border: 3px solid #fff000;
+    color: #fff000;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.printScore {
+    text-align: center;
+}
