@@ -51,6 +51,11 @@ function startGame() {
 //event listener, obsługuje sterowanie wężem
 document.addEventListener("keydown", function (e) {
   var key = e.keyCode;
+  
+  if((key == 40 || key == 38) && play ){
+    e.preventDefault();
+  }
+
   if (key == 37 && direction != "right") {
     direction = "left";
   } else if (key == 38 && direction != "down") {

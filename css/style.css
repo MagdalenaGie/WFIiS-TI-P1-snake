@@ -9,9 +9,6 @@ body {
     margin: 0% 10%;
 }
 
-
-/* header */
-
 .header {
     padding: 30px;
     text-align: center;
@@ -23,16 +20,10 @@ body {
     font-size: 50px;
 }
 
-
-/* top navigation bar */
-
 .topnav {
     overflow: hidden;
     background-color: #333;
 }
-
-
-/* the topnav links */
 
 .topnav a {
     float: left;
@@ -43,25 +34,16 @@ body {
     text-decoration: none;
 }
 
-
-/* Change color on hover */
-
 .topnav a:hover {
     background-color: #fff000;
     color: black;
 }
-
-
-/* Add a card effect for articles */
 
 .card {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
 }
-
-
-/* Footer */
 
 .footer {
     padding: 20px;
